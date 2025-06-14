@@ -50,7 +50,7 @@ gsap.to("#about-id", {
     scrub: 2,
     start: "top 0%",
     end: "top -150%",
-    markers: true,
+    // markers: true,
     pin: true,
   },
 });
