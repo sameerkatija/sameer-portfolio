@@ -47,10 +47,36 @@ gsap.to("#about-id", {
   scrollTrigger: {
     trigger: "#about",
     scroller: "body",
-    scrub: 2,
+    scrub: 4,
     start: "top 0%",
     end: "top -150%",
     // markers: true,
     pin: true,
   },
+});
+
+const str = document.getElementById("string");
+let changeablePath = `M 10 70 Q 100 70 890 70`;
+const finalPath = `M 10 70 Q 100 70 890 70`;
+str.addEventListener("mousemove", (e) => {
+  changeablePath = `M 10 70 Q ${e.x} ${e.y} 800 70`;
+  gsap.to("svg path", {
+    duration: 0.3,
+    attr: {
+      d: changeablePath,
+    },
+    ease: "power3.out",
+    // `M 10 70 Q 100 70 800 70`
+  });
+});
+
+str.addEventListener("mouseleave", () => {
+  gsap.to("svg path", {
+    duration: 1,
+    attr: {
+      d: finalPath,
+    },
+    ease: "elastic.out(1.2,0.2)",
+    // `M 10 70 Q 100 70 800 70`
+  });
 });
