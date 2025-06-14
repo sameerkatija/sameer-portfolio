@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="overflow-x-hidden w-full">
     <!-- Header Scrtion -->
     <header class="text-gray-400 bg-gray-900 body-font">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -100,8 +100,13 @@
         </div>
       </div>
     </section>
+    <section id="about" class="h-2/4 bg-black">
+      <h1 id="about-id" class="ml-20 text-white text-[800px] tracking-[20px] whitespace-nowrap">
+        About Me
+      </h1>
+    </section>
     <!-- About section -->
-    <section id="about" class="text-gray-400 bg-gray-900 body-font">
+    <section class="text-gray-400 bg-gray-900 body-font">
       <div class="container px-5 py-24 mx-auto flex flex-wrap">
         <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
           <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -401,6 +406,12 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
